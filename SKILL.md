@@ -1,11 +1,11 @@
 ---
 name: obsidian
-description: Conecta este chat ao cofre Obsidian "Danilo Second Brain" (D:\Obsidian\Danilo Second Brain) e passa a alimentá-lo durante toda a conversa. Ativado quando o usuário digita /obsidian ou pede para conectar/salvar/alimentar o Obsidian. A partir da ativação, tudo que o usuário passar e tudo que for feito no chat vira nota no cofre, criando pastas e arquivos conforme necessário.
+description: Conecta este chat ao (Seu cofre aqui ) e passa a alimentá-lo durante toda a conversa. Ativado quando o usuário digita /obsidian ou pede para conectar/salvar/alimentar o Obsidian. A partir da ativação, tudo que o usuário passar e tudo que for feito no chat vira nota no cofre, criando pastas e arquivos conforme necessário.
 ---
 
 # /obsidian — conexão viva com o cofre
 
-**Cofre:** `D:\Obsidian\Danilo Second Brain` (no Git Bash: `/d/Obsidian/Danilo Second Brain`)
+**Cofre:** `caminho do seu cofre aqui` (no Git Bash: `repositório do seu cofre aqui`)
 
 Ao ser ativada, esta skill vale **até o fim do chat**. Não é uma ação única: depois de ativada, você alimenta o cofre continuamente, sem o usuário precisar pedir de novo.
 
@@ -68,7 +68,7 @@ atualizado: AAAA-MM-DD
 ## 5. Como escrever os arquivos
 
 - **Padrão:** escreva direto no sistema de arquivos com `Write`/`Edit`, caminho absoluto sob `D:\Obsidian\Danilo Second Brain`. Funciona com o Obsidian aberto ou fechado e não depende de nada mais.
-- **Opcional:** com o Obsidian aberto, a CLI (`obsidian vault="Danilo Second Brain" search query="..."`, `backlinks`, `property:set`) ajuda em busca e backlinks. Detalhes na skill `obsidian-cli`. Se a CLI falhar, siga pelo sistema de arquivos.
+- **Opcional:** com o Obsidian aberto, a CLI (`obsidian vault="seu cofre aqui" search query="..."`, `backlinks`, `property:set`) ajuda em busca e backlinks. Detalhes na skill `obsidian-cli`. Se a CLI falhar, siga pelo sistema de arquivos.
 - Nunca grave fora do cofre, nunca apague nota existente sem o usuário pedir, e não mexa em `.obsidian/` (configuração do app), exceto se o usuário pedir.
 
 ## 6. Ao final de cada gravação
