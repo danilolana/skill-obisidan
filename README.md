@@ -1,6 +1,6 @@
 # skill-obisidan
 
-Skill `/obsidian` para Claude: conecta o chat ao cofre Obsidian "Danilo Second Brain" e passa a alimentá-lo durante toda a conversa (decisões, pendências, pessoas, registro de sessões).
+Skill `/obsidian` para Claude: conecta o chat ao cofre Obsidian, e passa a alimentá-lo durante toda a conversa (decisões, pendências, pessoas, registro de sessões).
 
 ## Instalação
 
