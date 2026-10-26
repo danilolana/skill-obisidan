@@ -1,11 +1,11 @@
 ---
 name: obsidian
-description: Conecta este chat ao cofre Obsidian "Danilo Second Brain" (/mnt/Disco/Obsidian/Danilo Second Brain), alimenta-o durante toda a conversa e mantém a organização. Ativado quando o usuário digita /obsidian ou pede para conectar/salvar/alimentar o Obsidian. Com "/obsidian organizar" faz uma varredura e reorganiza o cofre (propõe, e aplica após aprovação).
+description: Conecta este chat ao cofre Obsidian "nome do seu cofre aqui" (/caminho do seu cofre), alimenta-o durante toda a conversa e mantém a organização. Ativado quando o usuário digita /obsidian ou pede para conectar/salvar/alimentar o Obsidian. Com "/obsidian organizar" faz uma varredura e reorganiza o cofre (propõe, e aplica após aprovação).
 ---
 
 # /obsidian — conexão viva com o cofre
 
-**Cofre:** `/mnt/Disco/Obsidian/Danilo Second Brain` (Linux Fedora KDE; o HD é montado fixo via fstab em `/mnt/Disco`)
+**Cofre:** `/caminho do seu cofre` (seu sistema operacional`)
 
 Ao ser ativada, esta skill vale **até o fim do chat**. Depois de ativada, você alimenta o cofre continuamente, sem o usuário pedir de novo.
 
@@ -73,7 +73,7 @@ atualizado: AAAA-MM-DD
 
 - **Padrão:** `Write`/`Edit` direto no sistema de arquivos, caminho absoluto sob o cofre. Funciona com o Obsidian aberto ou fechado.
 - **Mover/renomear:** use `mv` (links `[[nome]]` resolvem por nome). Se algum link usar caminho (`[[Pasta/Nota]]`), corrija-o. Atualize o MOC depois.
-- **Opcional:** com o Obsidian aberto, a CLI (`obsidian vault="Danilo Second Brain" search query="..."`, `backlinks`, `property:set`) ajuda em busca e backlinks (skill `obsidian-cli`). Se falhar, siga pelo sistema de arquivos.
+- **Opcional:** com o Obsidian aberto, a CLI (`obsidian vault="nome do seu cofre" search query="..."`, `backlinks`, `property:set`) ajuda em busca e backlinks (skill `obsidian-cli`). Se falhar, siga pelo sistema de arquivos.
 - Nunca grave fora do cofre e não mexa em `.obsidian/`, exceto se o usuário pedir.
 
 ## 6. Apagar e arquivar
@@ -99,7 +99,7 @@ Verifique `[[wikilinks]]` e embeds `![[arquivo]]` sem destino, e notas órfãs (
 ```bash
 python3 - <<'EOF'
 import os,re
-V="/mnt/Disco/Obsidian/Danilo Second Brain"
+V="caminho do seu cofre"
 names=set()
 for r,d,f in os.walk(V):
     if '.git' in r or '.obsidian' in r: continue
